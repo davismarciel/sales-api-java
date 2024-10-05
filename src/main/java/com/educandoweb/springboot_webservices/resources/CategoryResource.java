@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices_jpa_hibernate.resources;
+package com.educandoweb.springboot_webservices.resources;
 
 import java.util.List;
 
@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.educandoweb.springboot_webservices_jpa_hibernate.entities.User;
-import com.educandoweb.springboot_webservices_jpa_hibernate.services.UserService;
+import com.educandoweb.springboot_webservices.entities.Category;
+import com.educandoweb.springboot_webservices.services.CategoryService;
 
 @RestController
-@RequestMapping(value = "/users")
-public class UserResource {
+@RequestMapping(value = "/categories")
+public class CategoryResource {
 	@Autowired
-	private UserService service;
+	private CategoryService service;
 
 	@GetMapping
-	public ResponseEntity<List<User>> findAll() {
-		List<User> list = service.findAll();
+	public ResponseEntity<List<Category>> findAll() {
+		List<Category> list = service.findAll();
 
 		return ResponseEntity.ok().body(list);
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<User> findById(@PathVariable Long id) {
-		User obj = service.findById(id);
+	public ResponseEntity<Category> findById(@PathVariable Long id) {
+		Category obj = service.findById(id);
 		
 		return ResponseEntity.ok().body(obj);
 		

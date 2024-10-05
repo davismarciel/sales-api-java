@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices_jpa_hibernate.entities;
+package com.educandoweb.springboot_webservices.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;

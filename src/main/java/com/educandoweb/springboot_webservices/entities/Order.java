@@ -1,10 +1,10 @@
-package com.educandoweb.springboot_webservices_jpa_hibernate.entities;
+package com.educandoweb.springboot_webservices.entities;
 
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
-import com.educandoweb.springboot_webservices_jpa_hibernate.entities.enums.OrderStatus;
+import com.educandoweb.springboot_webservices.entities.enums.OrderStatus;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Entity;

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.educandoweb</groupId>
-	<artifactId>springboot_webservices_jpa_hibernate</artifactId>
+	<artifactId>springboot_webservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot_webservices_jpa_hibernate</name>
+	<name>springboot_webservices</name>
 	<description>First project for Spring Boot development</description>
 	<url/>
 	<licenses>

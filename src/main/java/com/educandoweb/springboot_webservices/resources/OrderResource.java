@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices_jpa_hibernate.resources;
+package com.educandoweb.springboot_webservices.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.educandoweb.springboot_webservices_jpa_hibernate.entities.Order;
-import com.educandoweb.springboot_webservices_jpa_hibernate.services.OrderService;
+import com.educandoweb.springboot_webservices.entities.Order;
+import com.educandoweb.springboot_webservices.services.OrderService;
 
 @RestController
 @RequestMapping(value = "/orders")
