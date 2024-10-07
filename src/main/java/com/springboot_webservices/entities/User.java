@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices.entities;
+package com.springboot_webservices.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;

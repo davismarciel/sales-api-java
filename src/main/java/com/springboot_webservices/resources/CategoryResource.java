@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices.resources;
+package com.springboot_webservices.resources;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.educandoweb.springboot_webservices.entities.Category;
-import com.educandoweb.springboot_webservices.services.CategoryService;
+import com.springboot_webservices.entities.Category;
+import com.springboot_webservices.services.CategoryService;
 
 @RestController
 @RequestMapping(value = "/categories")

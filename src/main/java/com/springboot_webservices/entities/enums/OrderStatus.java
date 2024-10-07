@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices.entities.enums;
+package com.springboot_webservices.entities.enums;
 
 public enum OrderStatus {
 
