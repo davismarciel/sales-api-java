@@ -24,6 +24,9 @@ public class UserService {
 		return repository.save(obj);
 	}
 
+	public void delete(Long id) {
+		repository.deleteById(id);
+	}
 
 	public List<User> findAll() {
 		return repository.findAll();
