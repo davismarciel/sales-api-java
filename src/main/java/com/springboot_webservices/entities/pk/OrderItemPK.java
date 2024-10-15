@@ -2,12 +2,14 @@ package com.springboot_webservices.entities.pk;
 
 import com.springboot_webservices.entities.Order;
 import com.springboot_webservices.entities.Product;
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 import java.io.Serializable;
 import java.util.Objects;
 
+@Embeddable
 public class OrderItemPK implements Serializable {
     private static final long serialVersionUID = 1L;
 
