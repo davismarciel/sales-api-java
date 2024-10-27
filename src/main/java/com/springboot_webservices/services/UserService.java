@@ -3,8 +3,10 @@ package com.springboot_webservices.services;
 import java.util.List;
 import java.util.Optional;
 
+import com.springboot_webservices.services.exceptions.DatabaseException;
 import com.springboot_webservices.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.springboot_webservices.entities.User;
@@ -26,7 +28,18 @@ public class UserService {
 	}
 
 	public void delete(Long id) {
-		repository.deleteById(id);
+		try {
+			// Se id não existe
+			if(!repository.existsById(id)) {
+				throw new ResourceNotFoundException(id);
+			}
+			// Se existe, delete
+			repository.deleteById(id);
+		}
+		// Se o id está atribuido a algum objeto
+		catch (DataIntegrityViolationException e) {
+			throw new DatabaseException();
+		}
 	}
 
 	public List<User> findAll() {
