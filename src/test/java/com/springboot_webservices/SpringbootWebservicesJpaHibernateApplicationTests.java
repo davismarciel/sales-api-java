@@ -1,4 +1,4 @@
-package com.educandoweb.springboot_webservices;
+package com.springboot_webservices;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
