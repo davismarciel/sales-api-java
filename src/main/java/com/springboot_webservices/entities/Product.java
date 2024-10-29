@@ -42,6 +42,9 @@ public class Product implements Serializable {
 		this.imgUrl = imgUrl;
 	}
 
+	public Product(String name, String description, Double price, String imgUrl, Category category) {
+	}
+
 	public Long getId() {
 		return id;
 	}

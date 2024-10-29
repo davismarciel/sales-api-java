@@ -1,4 +1,5 @@
 package com.springboot_webservices.DTO;
 
-public record LoginResponseDTO() {
+public record LoginResponseDTO(String token) {
+
 }

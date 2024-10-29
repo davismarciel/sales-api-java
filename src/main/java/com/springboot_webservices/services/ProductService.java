@@ -14,7 +14,11 @@ public class ProductService {
 	
 	@Autowired
 	private ProductRepository repository;
-	
+
+	public Product insert(Product obj) {
+		return repository.save(obj);
+	}
+
 	public Product findById(Long id) {
 		Optional<Product> obj = repository.findById(id);
 		return obj.get();
