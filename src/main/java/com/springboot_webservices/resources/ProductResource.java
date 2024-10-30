@@ -3,6 +3,7 @@ package com.springboot_webservices.resources;
 import java.net.URI;
 import java.util.List;
 
+import com.springboot_webservices.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -28,6 +29,14 @@ public class ProductResource {
 
 		return ResponseEntity.created(uri).body(obj);
 	}
+
+	@PutMapping("/{id}")
+	public ResponseEntity<Product> edit(@PathVariable Long id, @RequestBody Product obj) {
+		obj = service.update(id, obj);
+
+		return ResponseEntity.ok().body(obj);
+	}
+
 
 	@GetMapping
 	public ResponseEntity<List<Product>> findAll() {
