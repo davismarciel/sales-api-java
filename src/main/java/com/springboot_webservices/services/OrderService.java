@@ -14,7 +14,11 @@ public class OrderService {
 	
 	@Autowired
 	private OrderRepository repository;
-	
+
+	public Order insert(Order obj) {
+		return repository.save(obj);
+	}
+
 	public Order findById(Long id) {
 		Optional<Order> obj = repository.findById(id);
 		return obj.get();

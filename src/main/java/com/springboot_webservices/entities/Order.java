@@ -29,7 +29,6 @@ public class Order implements Serializable {
 	@JoinColumn(name = "client_id")
 	private User client;
 
-
 	@OneToMany(mappedBy = "id.order")
 	Set<OrderItem> items = new HashSet<>();
 

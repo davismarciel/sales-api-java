@@ -3,6 +3,7 @@ package com.springboot_webservices.resources;
 import java.net.URI;
 import java.util.List;
 
+import com.springboot_webservices.entities.Order;
 import com.springboot_webservices.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,6 @@ public class ProductResource {
 
 		return ResponseEntity.ok().body(obj);
 	}
-
 
 	@GetMapping
 	public ResponseEntity<List<Product>> findAll() {
